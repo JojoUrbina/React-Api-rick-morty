@@ -15,10 +15,17 @@ export default function CharactersList() {
     }, []);
 
   return (
-    <div>{characters.map(character=>{
+    <div className="container ">
+        <div className="row">
+        {characters.map(character=>{
         return(
-            <Character key={character.id} character={character}/>
+            <div className="col-md-4 " key={character.id}>
+            <Character  character={character}/>
+            </div>
         )
-      })}</div>
+        
+      })}
+      </div>
+      </div>
   )
 }
