@@ -6,12 +6,12 @@ import React from "react";
 export function NavPage(props) {
   return (
     <header className="d-flex justify-content-between align-items-center  ">
-      <p>pagina actual:{props.page}</p>
+      <p>Pagina actual:{props.page}</p>
       <button
         onClick={() => props.setPage(props.page + 1)}
         className="btn btn-primary btn-sm"
       >
-        pagina {props.page + 1}
+        Pagina {props.page + 1}
       </button>
       <button onClick={()=>props.setPage(props.page>1?props.page-1:1) } className="btn btn-primary btn-sm">Atras</button>
     </header>
