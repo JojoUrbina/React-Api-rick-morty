@@ -13,7 +13,7 @@ export function NavPage(props) {
       >
         page {props.page + 1}
       </button>
-      {/* <button onClick={()=>props.setPage(props.page-1) } className="btn btn-primary btn-sm">page {props.page-1}</button> */}
+      <button onClick={()=>props.setPage(props.page>1?props.page-1:1) } className="btn btn-primary btn-sm">Atras</button>
     </header>
   );
 }
@@ -44,6 +44,7 @@ export default function CharactersList() {
           );
         })}
       </div>
+      <NavPage page={page} setPage={setPage} />
     </div>
   );
 }
